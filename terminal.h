@@ -1,3 +1,6 @@
+#pragma once
+
+
 namespace tc{
     //控制台函数
     void move_to(int row,int col);//移动光标到坐标
