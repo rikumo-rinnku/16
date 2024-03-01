@@ -23,17 +23,14 @@ namespace dw
     const std::u32string style4 = U" ╭╮╰╯│─";
     const std::u32string cur_style = style4;
 
-    inline int block2col(int b)
-    {
-        return 2 * b - 1;
-    }
+    
 
     void window(int top, int left, int width, int height, std::string title)
     {
 
         for (int row = 0; row < height; row++)
         {
-            tc::move_to(top + row, block2col(left));
+            tc::move_to(top + row, ut::block2col(left));
             for (int column = 0; column < width; column++)
             {
                 if (row == 0) // 第一行
@@ -84,7 +81,7 @@ namespace dw
             }
         }
         // title
-        tc::move_to(top, block2col(left) + (width * 2 - title.length()) / 2);
+        tc::move_to(top, ut::block2col(left) + (width * 2 - title.length()) / 2);
         std::cout << title;
     }
 
