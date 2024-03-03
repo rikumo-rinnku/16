@@ -1,9 +1,13 @@
 #pragma once
-#include <string>
+#include "define.h"
+#include "tetromino.h"
+
 namespace dw
 {
-    void window(int top,int left,int width,int height,std::string title);
-} // namespace dw
+    void window(int top, int left, int width, int height, std::string title);
+    void tetromino(gm::Tetromino& t,int top,int left);
+}
+// namespace dw
 /*
 这是绘制窗口部分，我们设定每一个格子占据两个光标，正好显示一格就是一个正方形
 传入的函数参数是窗口顶端位置、长宽高、标题名

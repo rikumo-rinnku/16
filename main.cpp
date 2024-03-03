@@ -36,11 +36,13 @@ void loop()
         //移动控制
         tc::move_to(gm::row, ut::block2col(gm::col));
         //方块显示
-        tc::set_back_color(15);
-        std::cout << "  ";
+        // tc::set_back_color(15);
+        // std::cout << "  ";
+        
+        dw::tetromino(gm::cur,gm::row,gm::col);
         tc::reset_color();
+        
         std::cout << std::flush;//用于刷新输出缓冲区，使得cout立即输出缓冲区中的内容而不需要等到缓冲区满了
-
         std::this_thread::sleep_for(32ms); // 600帧
     }
 }

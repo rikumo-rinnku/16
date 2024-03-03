@@ -1,5 +1,5 @@
 #pragma once
-
+#include "tetromino.h"
 namespace gm
 {
     extern bool running;//判断游戏是否在运行
@@ -13,4 +13,6 @@ namespace gm
 
     //记录光标位置
     extern int row,col;
+
+    extern Tetromino cur;
 } // namespace gm
